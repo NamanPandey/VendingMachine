@@ -25,6 +25,10 @@ Machine* Machine::createMachine(int slotWidth, int slotHeight) {
     return m_instance; 
 }
 
+float Machine::getTotalRevenue() {
+    return m_collector->getTotalRevenue();
+}
+
 Machine::Machine(int slotWidth, int slotHeight): 
     m_slotWidth(slotWidth), m_slotHeight(slotHeight) {
         cout << "Creating a Machine with Width: " << m_slotWidth << " | Height: " << m_slotHeight << endl;

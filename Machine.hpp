@@ -17,7 +17,7 @@ class Machine {
 
         // Brief   : Get Total Income Generated.
         // Returns : Total INR float value 
-        float getTotalIncome();
+        float getTotalRevenue();
 
         // Brief  : Add Product to a slot number
         // Returns: None

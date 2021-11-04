@@ -63,6 +63,7 @@ int main() {
                             cout << p.getName() << " ";
                         cout << endl;
                         cout << "=======================================================" << endl;
+                        cout << "Total Revenue Generated: " << myMachine->getTotalRevenue() << endl;
                         sleep(3);
                     }
                 }

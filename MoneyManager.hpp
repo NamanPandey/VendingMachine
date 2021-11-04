@@ -11,6 +11,10 @@ class MoneyManager {
         //Brief  : Ctor
         MoneyManager();
 
+        //Brief  : Getter for total revenue collected so far
+        //Returns: total revenue collected so far, float
+        float getTotalRevenue();
+
         //Brief  : Getter for money collection map
         //Returns: m_collections Map
         map<float, long> getCollections();
@@ -30,7 +34,7 @@ class MoneyManager {
         ReturnCode collect(float collectionAmount);
         
     private:
-        float totalAmount = 0.0f;           //Total revenue collected yet
+        float m_totalAmount = 0.0f;           //Total revenue collected yet
         map<float, long> m_collections;     //Denominations collection map
         vector<Transaction> m_transactions; //Vector to push transactions
 

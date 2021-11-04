@@ -10,6 +10,10 @@ map<float, long> MoneyManager::getCollections() {
 
 MoneyManager::MoneyManager() {}
 
+float MoneyManager::getTotalRevenue() {
+    return this->m_totalAmount;
+}
+
 ReturnCode MoneyManager::initiateTransaction(Transaction** latestTransaction) {
     if (m_transactions.size() && m_transactions.back().status == PaymentStatus::OPEN ) {
         *latestTransaction = &m_transactions.back();
@@ -58,7 +62,7 @@ ReturnCode MoneyManager::collect(float collectionAmount) {
         }
     }
 
-    this->totalAmount += collectionAmount;
+    this->m_totalAmount += collectionAmount;
     return ReturnCode::SUCCESS;
 }
 
