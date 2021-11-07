@@ -3,6 +3,7 @@
 #include <string>
 
 #include "Machine.cpp"
+#include "Utils.cpp"
 
 #define MAX_RETRY 3
 
@@ -18,7 +19,7 @@ ReturnCode retry(Machine* myMachine, ReturnCode (Machine::*foo)()) {
             return ReturnCode::SUCCESS;
         } else if ( retry == MAX_RETRY ) {
             cout << "ERROR: Max retries limit exceeded. Reverting Transaction." << endl;
-            sleep(3);
+            sleepFunction(3);
             return ReturnCode::FAILURE;
         }
     }
@@ -64,7 +65,7 @@ int main() {
                         cout << endl;
                         cout << "=======================================================" << endl;
                         cout << "Total Revenue Generated: " << myMachine->getTotalRevenue() << endl;
-                        sleep(3);
+                        sleepFunction(3);
                     }
                 }
             }

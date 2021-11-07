@@ -82,7 +82,7 @@ ReturnCode Machine::chooseSlot() {
         if(slotId < 1 || slotId > maxSlots || m_slots[slotId-1].getMaxProducts() == 0) {
             cout << ">> Invalid Entry! Please try again..." << endl;
             m_latestTransaction->slot = nullptr;
-            sleep(3);
+            sleepFunction(3);
             return ReturnCode::FAILURE;
         }
         m_latestTransaction->slot = &m_slots[slotId-1]; 
@@ -105,7 +105,7 @@ ReturnCode Machine::chooseQuantity() {
         if(m_latestTransaction->quantity < 1 || m_latestTransaction->quantity > maxQty) {
             cout << ">> Invalid Entry! Please try again..." << endl;
             m_latestTransaction->quantity = -1;
-            sleep(3);
+            sleepFunction(3);
             return ReturnCode::FAILURE;
         }
         
