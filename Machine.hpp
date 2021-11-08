@@ -1,4 +1,4 @@
-#include <vector>
+    #include <vector>
 #include <unordered_map>
 
 #include "Slot.hpp"
@@ -50,7 +50,7 @@ class Machine {
         //         This requires us to pass the address to an 
         //         existing productBin where we add dispensed products 
         //Returns: Bool ReturnCode
-        ReturnCode dispenseProduct(vector<Product>* product);
+        ReturnCode dispenseProduct(vector<Product>* productBin);
 
 
     private:
